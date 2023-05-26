@@ -1,0 +1,18 @@
+#request-button{
+  right: 0;
+  width: 100px;
+  height: 25px;
+  border-radius: 3px;
+  border: none;
+  background-color: rgba(67, 67, 67, 0.53);
+  color: white;
+  cursor: pointer;
+  transition: 0.1s all;
+  margin-top: 20px;
+}
+#request-button:hover{
+  background-color: rgba(27, 27, 27, 0.53);
+}
+#request-button:active{
+  background-color: rgba(182, 113, 113, 0.53);
+}

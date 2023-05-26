@@ -1,0 +1,10 @@
+.app-header{
+    background-color: #434343;
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+.authorization{
+    position: absolute;
+    right: 0;
+}
