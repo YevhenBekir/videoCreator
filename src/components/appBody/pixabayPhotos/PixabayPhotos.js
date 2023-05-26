@@ -1,9 +1,30 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import './pixabayPhotos.css';
 
 const PixabayPhotos = ({photos}) => {
 	const [activeIndexes, setActiveIndexes] = useState([]);
+	const [selectPhotos, setSelectPhotos] = useState([]);
+
+	console.log(photos)
+	useEffect(() => {
+		photos.forEach(item => {
+			item.forEach(el => {
+				const isActive = activeIndexes.some(k => k === el.id)
+				if(isActive){
+					const isPhotoSelected = selectPhotos.some((photo) => photo === el.webformatURL);
+					if (!isPhotoSelected) {
+						setSelectPhotos((prevSelectPhotos) => [...prevSelectPhotos, el.webformatURL]);
+					}
+				} else {
+					setSelectPhotos((prevSelectPhotos) =>
+          	prevSelectPhotos.filter((photo) => photo !== el.webformatURL)
+        );
+				}
+				
+			})
+		})
+	}, [activeIndexes])
 
 	const handleImageClick = (index) => {
 		const isActive = activeIndexes.includes(index)
@@ -18,7 +39,7 @@ const PixabayPhotos = ({photos}) => {
 
 	const photosList = photos.map(item => {
 		return item.map(el => {
-
+console.log(el)
 			const isActive = activeIndexes.includes(el.id);
 
 			return <img

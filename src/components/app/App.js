@@ -14,6 +14,9 @@ const App = () => {
 
   const {request, requestLoading, requestError} = useHttp();
 
+  console.log(requestLoading);
+  console.log(requestError);
+
   useEffect(() => {
 
     if(words.length){
@@ -46,6 +49,8 @@ const App = () => {
 
   const reqToServer = (url, method = "GET", body = null, headers = { "Content-type": "application/json" }) => {
     request(url, method, body, headers)
+      .then(data => console.log(data))
+      .catch(console.log('error promise'))
   }
 
   return(
