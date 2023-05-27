@@ -2,9 +2,13 @@ import { useState, useEffect } from 'react';
 
 import './pixabayPhotos.css';
 
-const PixabayPhotos = ({photos}) => {
+const PixabayPhotos = ({photos, newSelectedPhotos}) => {
 	const [activeIndexes, setActiveIndexes] = useState([]);
 	const [selectPhotos, setSelectPhotos] = useState([]);
+
+	useEffect(() => {
+		newSelectedPhotos(selectPhotos)
+	}, [selectPhotos])
 
 	console.log(photos)
 	useEffect(() => {
@@ -24,6 +28,7 @@ const PixabayPhotos = ({photos}) => {
 				
 			})
 		})
+
 	}, [activeIndexes])
 
 	const handleImageClick = (index) => {

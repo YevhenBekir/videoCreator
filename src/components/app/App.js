@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useHttp } from '../../service/http.hook'
+import axios from "axios";
 
 import AppHeader from '../appHeader/AppHeader';
 import AppBody from "../appBody/AppBody";
@@ -18,7 +19,7 @@ const App = () => {
   console.log(requestError);
 
   useEffect(() => {
-
+    
     if(words.length){
       words.forEach(item => {
 
