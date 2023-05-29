@@ -10,7 +10,6 @@ const PixabayPhotos = ({photos, newSelectedPhotos}) => {
 		newSelectedPhotos(selectPhotos)
 	}, [selectPhotos])
 
-	console.log(photos)
 	useEffect(() => {
 		photos.forEach(item => {
 			item.forEach(el => {
@@ -44,7 +43,6 @@ const PixabayPhotos = ({photos, newSelectedPhotos}) => {
 
 	const photosList = photos.map(item => {
 		return item.map(el => {
-console.log(el)
 			const isActive = activeIndexes.includes(el.id);
 
 			return <img

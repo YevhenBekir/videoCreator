@@ -1,6 +1,6 @@
 #request-button{
   right: 0;
-  width: 100px;
+  min-width: 100px;
   height: 25px;
   border-radius: 3px;
   border: none;
@@ -9,6 +9,7 @@
   cursor: pointer;
   transition: 0.1s all;
   margin-top: 20px;
+  padding: 0 25px;
 }
 #request-button:hover{
   background-color: rgba(27, 27, 27, 0.53);

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useHttp } from '../../service/http.hook'
 import axios from "axios";
 
 import AppHeader from '../appHeader/AppHeader';
@@ -13,17 +12,10 @@ const App = () => {
   const [photos, setPhotos] = useState([]);
   const [creatorSwitcher, setCreatorSwitcher] = useState('Midjourney');
 
-  const {request, requestLoading, requestError} = useHttp();
-
-  console.log(requestLoading);
-  console.log(requestError);
-
   useEffect(() => {
     
     if(words.length){
       words.forEach(item => {
-
-        console.log(item)
 
       // value from field
       if(!item.input.value){
@@ -48,12 +40,6 @@ const App = () => {
     setWords(data)
   }
 
-  const reqToServer = (url, method = "GET", body = null, headers = { "Content-type": "application/json" }) => {
-    request(url, method, body, headers)
-      .then(data => console.log(data))
-      .catch(console.log('error promise'))
-  }
-
   return(
     <>
       <AppHeader/>
@@ -62,8 +48,7 @@ const App = () => {
         photos={photos}
         creatorSwitcher={creatorSwitcher}
         setNewSwitcher={setNewSwitcher}
-        setNewWords={setNewWords}
-        reqToServer={reqToServer}/>
+        setNewWords={setNewWords}/>
     </>
   )
 }

@@ -24,7 +24,7 @@ const AppForm = ({setNewWords, reqToServer}) => {
 				<input type="text" className="input-field" name="main-field" placeholder="This is not a required field"/>
 				<input type="text" className="input-field" name="main-field" placeholder="This is not a required field"/>
 				<br />
-				<input type="submit" id="submit-button"/>				
+				<input type="submit" id="submit-button" value={'Показати фото'}/>
 			</form>
 		</div>
 	)
