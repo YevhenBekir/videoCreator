@@ -10,6 +10,7 @@ const PixabayPhotos = ({photos, newSelectedPhotos}) => {
 		newSelectedPhotos(selectPhotos)
 	}, [selectPhotos])
 
+
 	useEffect(() => {
 		photos.forEach(item => {
 			item.forEach(el => {

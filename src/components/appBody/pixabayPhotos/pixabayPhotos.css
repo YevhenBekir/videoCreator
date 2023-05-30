@@ -16,4 +16,5 @@ img{
 }
 .active{
     border: red 2px solid;
+    cursor: pointer;
 }

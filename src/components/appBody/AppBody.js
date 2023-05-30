@@ -8,7 +8,7 @@ import AppVideoGenerator from './appVideoGenerator/AppVideoGenerator';
 import './appBody.css';
 
 const AppBody = ({words, photos, loading, creatorSwitcher, setNewSwitcher, setNewWords, reqToServer}) => {
-	const [selectedPhotos, setSelectedPhotos] = useState([]);
+	const [selectedPhotos, setSelectedPhotos] = useState(['photo']);
 
 	const newSelectedPhotos = (arr) => {
 		setSelectedPhotos(arr)
@@ -29,7 +29,8 @@ const AppBody = ({words, photos, loading, creatorSwitcher, setNewSwitcher, setNe
 			</div>
 			<AppVideoGenerator 
 				reqToServer={reqToServer}
-				selectedPhotos={selectedPhotos}/>
+				selectedPhotos={selectedPhotos}
+				newSelectedPhotos={newSelectedPhotos}/>
 			<div className="line"></div>
 			<PixabayPhotos 
 				photos={photos}

@@ -15,7 +15,7 @@
 }
 #submit-button{
     right: 0;
-    min-width: 100px;
+    min-width: 210px;
     height: 25px;
     border-radius: 3px;
     border: none;
@@ -30,5 +30,5 @@
     background-color: rgba(27, 27, 27, 0.53);
 }
 #submit-button:active{
-    background-color: rgba(182, 113, 113, 0.53);
+    background-color: rgba(169, 182, 113, 0.53);
 }

@@ -1,10 +1,10 @@
 #request-button{
   right: 0;
-  min-width: 100px;
+  min-width: 210px;
   height: 25px;
   border-radius: 3px;
   border: none;
-  background-color: rgba(67, 67, 67, 0.53);
+  background-color: rgba(39, 117, 43, 0.53);
   color: white;
   cursor: pointer;
   transition: 0.1s all;
@@ -12,8 +12,28 @@
   padding: 0 25px;
 }
 #request-button:hover{
-  background-color: rgba(27, 27, 27, 0.53);
+  background-color: rgba(22, 59, 24, 0.53);
 }
 #request-button:active{
-  background-color: rgba(182, 113, 113, 0.53);
+  background-color: rgba(30, 146, 36, 0.53);
+}
+
+#clear-button{
+  right: 0;
+  min-width: 210px;
+  height: 25px;
+  border-radius: 3px;
+  border: none;
+  background-color: rgba(132, 38, 38, 0.53);
+  color: white;
+  cursor: pointer;
+  transition: 0.1s all;
+  margin-top: 20px;
+  padding: 0 25px;
+}
+#clear-button:hover{
+  background-color: rgba(92, 25, 25, 0.53);
+}
+#clear-button:active{
+  background-color: rgba(194, 15, 15, 0.53);
 }
